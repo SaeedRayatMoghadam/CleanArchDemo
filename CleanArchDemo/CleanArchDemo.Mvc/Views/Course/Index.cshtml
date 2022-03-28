@@ -1,0 +1,25 @@
+﻿@model CleanArchDemo.Application.ViewModels.CourseViewModel
+
+<div class="container">
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var course in Model.Courses)
+            {
+                <tr>
+                    <td>@course.Id</td>
+                    <td>@course.Name</td>
+                    <td>@course.Description</td>
+                    <td><img src="@course.ImageUrl" class="img-thumbnail" width="100" height="100" /></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
