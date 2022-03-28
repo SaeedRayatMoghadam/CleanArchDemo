@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CleanArchDemo.Infra.Data.Context;
+using CleanArchDemo.Infra.IOC;
 
 namespace CleanArchDemo.Mvc
 {
@@ -42,6 +43,9 @@ namespace CleanArchDemo.Mvc
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+
+            //IOC
+            RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,5 +78,11 @@ namespace CleanArchDemo.Mvc
                 endpoints.MapRazorPages();
             });
         }
+
+        private static void RegisterServices(IServiceCollection services)
+        {
+            DependencyContainer.RegisterServices(services);
+        }
+
     }
 }
