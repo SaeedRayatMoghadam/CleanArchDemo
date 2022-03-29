@@ -16,8 +16,7 @@ namespace CleanArchDemo.Mvc.Controllers
 
         public IActionResult Index()
         {
-            var courses = _courseService.GetCourses();
-            return View(courses);
+            return View(_courseService.GetCourses());
         }
     }
 }

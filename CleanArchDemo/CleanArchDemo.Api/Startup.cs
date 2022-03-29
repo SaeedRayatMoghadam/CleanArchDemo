@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CleanArchDemo.Api.Configuration;
 using CleanArchDemo.Infra.Data.Context;
 using CleanArchDemo.Infra.IOC;
 using MediatR;
@@ -46,6 +47,11 @@ namespace CleanArchDemo.Api
 
             //MediatR
             services.AddMediatR(typeof(Startup));
+
+
+            //AutoMapper
+            services.RegisterAutoMapper();
+
 
             //IOC
             RegisterServices(services);
