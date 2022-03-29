@@ -8,4 +8,8 @@
     <PackageReference Include="MediatR" Version="10.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchDemo.Domain.Core\CleanArchDemo.Domain.Core.csproj" />
+  </ItemGroup>
+
 </Project>
