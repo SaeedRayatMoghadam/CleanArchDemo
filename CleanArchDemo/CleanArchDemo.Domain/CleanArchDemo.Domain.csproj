@@ -7,6 +7,12 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Commands\" />
+    <Folder Include="CommandHandlers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchDemo.Domain.Core\CleanArchDemo.Domain.Core.csproj" />
   </ItemGroup>
 
 </Project>
